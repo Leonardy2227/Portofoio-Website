@@ -1,0 +1,119 @@
+.about {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-height: 90vh;
+  margin: 0 auto;
+  padding: 80px 32px;
+  box-sizing: border-box;
+}
+
+.title-about {
+  position: absolute;
+  top: 80px;
+  transform: translateY(36px);
+  left: 58%;
+  font-size: clamp(42px, 7vw, 60px);
+  line-height: 1.1;
+  letter-spacing: -3px;
+  margin: 20px 0;
+}
+
+.line-vertical {
+  position: absolute;
+  top: 270px;
+  left: 33%;
+  width: 7px;
+  height: 600px;
+  border-radius: 20px;
+  background-color: #a58ebe;
+}
+
+.about-box {
+  position: absolute;
+  transform: translateY(45px) ;
+  top: 270px;
+  left: 37%;
+  width: min(60%, 1100px);
+  padding: 30px 35px;
+  box-sizing: border-box;
+
+  background: rgba(92, 105, 179, 0.226);
+  border: 1px solid rgba(197, 170, 255, 0.3);
+  border-radius: 20px;
+
+  box-shadow:
+  0 0 15px rgba(165, 142, 190, 0.08),
+  inset 0 0 20px rgba(165, 142, 190, 0.04);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  z-index: 2;
+}
+
+.about-description {
+  width: 100%;
+  margin: 0;
+  color: var(--text-description);
+  text-align: justify;
+  line-height: 1.9;
+  font-size: 20px;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 70px 20px;
+    min-height: 100vh;
+  }
+
+  .title-about {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 20px 0 35px;
+    font-size: clamp(36px, 9vw, 48px);
+    letter-spacing: -2px;
+  }
+
+  .line-vertical {
+    top: 222.7px;
+    left: 20.5px;
+    width: 4px;
+    height: calc(100% - 260px);
+    min-height: 300px;
+  }
+
+  .about-box {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin-top: 0;
+    padding: 25px 22px 25px 30px;
+  }
+
+  .about-description {
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+}
+
+/* =========================
+   LIGHT MODE — ABOUT
+========================= */
+
+html[data-theme="light"] .about-box {
+  background: rgba(255, 255, 255, 0.78);
+  border-color: rgba(112, 80, 201, 0.25);
+
+  box-shadow:
+    0 0 15px rgba(112, 80, 201, 0.07),
+    inset 0 0 20px rgba(112, 80, 201, 0.025);
+}
+
+html[data-theme="light"] .line-vertical {
+  background-color: #8b72c7;
+}
